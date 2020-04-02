@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/auto/auto-common/0.10/auto-common-0.10.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/org/checkerframework/dataflow/2.5.3/dataflow-2.5.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/errorprone/error_prone_annotation/2.3.3/error_prone_annotation-2.3.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/protobuf/protobuf-java/3.4.0/protobuf-java-3.4.0.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/github/kevinstern/software-and-algorithms/1.0/software-and-algorithms-1.0.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/errorprone/error_prone_core/2.3.3/error_prone_core-2.3.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/errorprone/error_prone_type_annotations/2.3.3/error_prone_type_annotations-2.3.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/org/checkerframework/checker-qual/2.5.3/checker-qual-2.5.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/errorprone/error_prone_check_api/2.3.3/error_prone_check_api-2.3.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/org/codehaus/mojo/animal-sniffer-annotations/1.17/animal-sniffer-annotations-1.17.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/github/stephenc/jcip/jcip-annotations/1.0-1/jcip-annotations-1.0-1.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/code/findbugs/jFormatString/3.0.0/jFormatString-3.0.0.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/org/checkerframework/javacutil/2.5.3/javacutil-2.5.3.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/org/pcollections/pcollections/2.1.2/pcollections-2.1.2.jar" />
+          <entry name="$PROJECT_DIR$/../androidx-master-dev/prebuilts/androidx/external/com/google/guava/guava/27.0.1-jre/guava-27.0.1-jre.jar" />
+        </processorPath>
+        <module name="generator" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="annotation-experimental" target="1.7" />
+      <module name="annotation-experimental-lint-integration-tests" target="1.8" />
+      <module name="app" target="1.8" />
+      <module name="benchmark-common" target="1.8" />
+      <module name="benchmark-junit4" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="compose-compiler-hosted.integration-tests" target="1.8" />
+      <module name="compose-runtime" target="1.8" />
+      <module name="compose-runtime-benchmark" target="1.8" />
+      <module name="core.samples" target="1.8" />
+      <module name="demos" target="1.8" />
+      <module name="doclava" target="1.8" />
+      <module name="EsvBible.app" target="1.8" />
+      <module name="EsvBible.buildSrc" target="1.8" />
+      <module name="EsvBible.buildSrc.jetpad-integration" target="1.8" />
+      <module name="fakeannotations" target="1.7" />
+      <module name="integration-tests.benchmark" target="1.8" />
+      <module name="samples" target="1.8" />
+      <module name="test" target="1.8" />
+      <module name="test-screenshot" target="1.8" />
+      <module name="tracing-ktx" target="1.8" />
+      <module name="tracing.tracing" target="1.8" />
+      <module name="ui-android-text" target="1.8" />
+      <module name="ui-android-view" target="1.8" />
+      <module name="ui-android-view-demos" target="1.8" />
+      <module name="ui-android-view.samples" target="1.8" />
+      <module name="ui-animation" target="1.8" />
+      <module name="ui-animation-core" target="1.8" />
+      <module name="ui-animation-core.samples" target="1.8" />
+      <module name="ui-animation-demos" target="1.8" />
+      <module name="ui-animation.samples" target="1.8" />
+      <module name="ui-core" target="1.8" />
+      <module name="ui-core.samples" target="1.8" />
+      <module name="ui-foundation" target="1.8" />
+      <module name="ui-foundation-demos" target="1.8" />
+      <module name="ui-foundation.samples" target="1.8" />
+      <module name="ui-framework" target="1.8" />
+      <module name="ui-framework-demos" target="1.8" />
+      <module name="ui-framework.samples" target="1.8" />
+      <module name="ui-geometry" target="1.8" />
+      <module name="ui-graphics" target="1.8" />
+      <module name="ui-layout" target="1.8" />
+      <module name="ui-layout-demos" target="1.8" />
+      <module name="ui-layout.samples" target="1.8" />
+      <module name="ui-material" target="1.8" />
+      <module name="ui-material-demos" target="1.8" />
+      <module name="ui-material-icons-core" target="1.8" />
+      <module name="ui-material-icons-extended" target="1.8" />
+      <module name="ui-material-studies" target="1.8" />
+      <module name="ui-material.samples" target="1.8" />
+      <module name="ui-platform" target="1.8" />
+      <module name="ui-platform.samples" target="1.8" />
+      <module name="ui-saved-instance-state" target="1.8" />
+      <module name="ui-saved-instance-state.samples" target="1.8" />
+      <module name="ui-test" target="1.8" />
+      <module name="ui-text" target="1.8" />
+      <module name="ui-text-demos" target="1.8" />
+      <module name="ui-text.samples" target="1.8" />
+      <module name="ui-tooling" target="1.8" />
+      <module name="ui-unit" target="1.8" />
+      <module name="ui-unit.samples" target="1.8" />
+      <module name="ui-util" target="1.8" />
+      <module name="ui-vector" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

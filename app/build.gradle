@@ -1,0 +1,37 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+import static androidx.build.dependencies.DependenciesKt.*
+
+plugins {
+    id("AndroidXPlugin")
+    id("AndroidXUiPlugin")
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+dependencies {
+    kotlinPlugin project(path: ":compose:compose-compiler")
+    implementation(KOTLIN_STDLIB)
+    implementation project(":ui:ui-framework")
+    implementation project(":ui:ui-layout")
+    implementation project(":ui:ui-material")
+    implementation project(":ui:ui-material")
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+android {
+    defaultConfig {
+        applicationId "aaronstacy.esvbible"
+        minSdkVersion 23
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+}
+
+tasks.withType(KotlinCompile).configureEach {
+    kotlinOptions {
+        useIR = true
+    }
+}

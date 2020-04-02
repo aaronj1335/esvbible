@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/../androidx-master-dev/external/doclava" name="doclava">
+                <projects>
+                  <project path="$PROJECT_DIR$/../androidx-master-dev/external/doclava" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="/usr/local/Cellar/gradle/6.1.1/libexec" />
+        <option name="gradleJvm" value="JDK" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../androidx-master-dev/external/doclava" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/annotation/annotation-experimental" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/annotation/annotation-experimental-lint" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/annotation/annotation-experimental-lint/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/annotation/annotation-sampled" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/benchmark/common" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/benchmark/junit4" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/buildSrc" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/buildSrc/jetpad-integration" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/compose/compose-compiler" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/compose/compose-compiler-hosted" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/compose/compose-compiler-hosted/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/compose/compose-runtime" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/compose/compose-runtime/compose-runtime-benchmark" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/compose/compose-runtime/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/fakeannotations" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/lint-checks" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/test/screenshot" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/tracing/tracing" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/tracing/tracing-ktx" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/integration-tests/benchmark" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/integration-tests/demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/integration-tests/demos/common" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/integration-tests/test" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-android-text" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-android-view" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-android-view/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-android-view/integration-tests/android-view-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-android-view/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-animation" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-animation-core" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-animation-core/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-animation/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-animation/integration-tests/animation-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-animation/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-core" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-core/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-foundation" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-foundation/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-foundation/integration-tests/foundation-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-foundation/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-framework" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-framework/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-framework/integration-tests/framework-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-framework/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-geometry" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-graphics" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-internal-lint-checks" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-layout" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-layout/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-layout/integration-tests/layout-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-layout/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/icons" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/icons/core" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/icons/core/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/icons/extended" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/icons/generator" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/integration-tests/material-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/integration-tests/material-studies" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-material/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-platform" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-platform/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-saved-instance-state" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-saved-instance-state/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-test" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-text" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-text/integration-tests" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-text/integration-tests/text-demos" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-text/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-tooling" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-unit" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-unit/samples" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-util" />
+            <option value="$PROJECT_DIR$/../androidx-master-dev/frameworks/support/ui/ui-vector" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/annotation" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/benchmark" />
+            <option value="$PROJECT_DIR$/compose" />
+            <option value="$PROJECT_DIR$/tracing" />
+            <option value="$PROJECT_DIR$/ui" />
+            <option value="$PROJECT_DIR$/ui/integration-tests" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
