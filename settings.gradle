@@ -123,5 +123,6 @@ includeProject(":fakeannotations", "../fakeannotations")
 
 apply from: new File('buildSrc/remoteBuildCache.gradle')
 
+include ':data'
 include ':app'
 rootProject.name = "EsvBible"

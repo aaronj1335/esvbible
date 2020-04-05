@@ -41,6 +41,7 @@
       <module name="compose-runtime" target="1.8" />
       <module name="compose-runtime-benchmark" target="1.8" />
       <module name="core.samples" target="1.8" />
+      <module name="data" target="1.8" />
       <module name="demos" target="1.8" />
       <module name="doclava" target="1.8" />
       <module name="EsvBible.app" target="1.8" />
