@@ -1,6 +1,5 @@
 package aaronstacy.esvbible
 
-import android.util.Log
 import androidx.compose.Composable
 import androidx.compose.getValue
 import androidx.compose.onPreCommit
@@ -9,21 +8,21 @@ import androidx.compose.state
 import kotlinx.coroutines.Job
 
 @Composable
-fun <S, A> UseStore(content: @Composable() (S, (A) -> Job) -> Unit) {
+fun <S, A, SS> UseStore(
+  mapStateToProp: (S) -> SS,
+  content: @Composable() (SS, (A) -> Job) -> Unit
+) {
   val store = currentAmbientStore<Any, Any>()
-  var currentState by state { store.state }
+  @Suppress("UNCHECKED_CAST") var currentStateMapping by state { mapStateToProp(store.state as S) }
 
   onPreCommit {
     val cancel = store.onChange {
-      currentState = it
+      @Suppress("UNCHECKED_CAST") val newStateMapping = mapStateToProp(it as S)
+      if (newStateMapping != currentStateMapping) currentStateMapping = newStateMapping
     }
 
-    onDispose {
-      cancel()
-    }
+    onDispose(cancel)
   }
 
-  Log.w("EsvBibleUseStore", "Update UseStore to pull out subset of re-renderable state")
-
-  @Suppress("UNCHECKED_CAST") content(currentState as S) { store.dispatch(it as Any) }
+  content(currentStateMapping) { store.dispatch(it as Any) }
 }

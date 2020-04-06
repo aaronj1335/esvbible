@@ -1,5 +1,6 @@
 package aaronstacy.esvbible.data
 
+@Suppress("unused")
 enum class Book(val chapterCount: Int, private val _displayName: String? = null) {
   Genesis(50),
   Exodus(40),
@@ -83,6 +84,4 @@ data class Reference(val book: Book, val chapter: Int, val verse: Int) {
   val displayName get() = "${book.displayName} $chapter:$verse"
 }
 
-data class Chapter(val reference: Reference, val text: String) {
-  fun toEntry() = Pair(reference, this)
-}
+data class Chapter(val reference: Reference, val text: String)

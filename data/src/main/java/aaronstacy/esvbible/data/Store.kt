@@ -19,7 +19,7 @@ private const val TAG = "Store"
 private fun log(message: String) = log(TAG, message)
 private fun <T> Flow<T>.log(message: String): Flow<T> = log(TAG, message)
 
-typealias StoreChangeCallback<S> = (S) -> Unit
+private typealias StoreChangeCallback<S> = (S) -> Unit
 
 interface Store<S, A> {
   fun dispatch(action: A): Job
@@ -69,7 +69,7 @@ private class StoreImplementation<S, A>(
 
   override fun onChange(callback: StoreChangeCallback<S>): () -> Unit {
     val job = flow
-      .log("In onChange").onEach { callback(it) }
+      .log("Firing onChange callback for ${callback.hashCode()}").onEach { callback(it) }
       .flowOn(Main)
       .produceIn(scope)
     return { job.cancel() }

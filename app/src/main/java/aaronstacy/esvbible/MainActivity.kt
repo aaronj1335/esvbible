@@ -2,6 +2,7 @@ package aaronstacy.esvbible
 
 import aaronstacy.esvbible.data.Action
 import aaronstacy.esvbible.data.Book
+import aaronstacy.esvbible.data.Chapter
 import aaronstacy.esvbible.data.Reference
 import aaronstacy.esvbible.data.RequestChapter
 import aaronstacy.esvbible.data.State
@@ -28,6 +29,7 @@ import androidx.ui.material.icons.Icons
 import androidx.ui.material.icons.filled.Favorite
 import androidx.ui.material.icons.filled.Search
 import androidx.ui.material.icons.filled.Settings
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 
@@ -40,28 +42,28 @@ private fun indexToReference(index: Int) = when (index) {
 
 private const val TAG = "MainAc"
 
-class MainActivity : Activity() {
-  private val scope = MainScope()
-
+class MainActivity : Activity(), CoroutineScope by MainScope() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
+
     setContent {
       MaterialTheme {
-        ProvideCoroutineScope(scope) {
+        ProvideCoroutineScope(this) {
           ProvideStore(
             createStore = @Composable {
               AmbientScope.current.createStore(reducer, State(mapOf(), setOf()))
             }
           ) {
             ProvideFetcher {
-              UseStore<State, Action> { currentState, dispatch ->
-                log(TAG, "Re-rendering with new state $currentState")
+              UseStore<State, Action, Map<Reference, Chapter>>(
+                mapStateToProp = { it.chapters }
+              ) { chapters, dispatch ->
+                log(TAG, "Re-rendering with new set of chapters $chapters")
 
                 Stack {
                   var selectedItem by state { 0 }
                   val reference = indexToReference(selectedItem)
-                  val text =
-                    currentState.chapters[reference]?.text ?: "Loading ${reference.displayName}"
+                  val text = chapters[reference]?.text ?: "Loading ${reference.displayName}"
 
                   dispatch(RequestChapter(reference))
 
@@ -97,6 +99,6 @@ class MainActivity : Activity() {
 
   override fun onDestroy() {
     super.onDestroy()
-    scope.cancel()
+    cancel()
   }
 }
