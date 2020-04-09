@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asFlow
 import kotlinx.coroutines.flow.broadcastIn
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.flowOn
-import kotlinx.coroutines.flow.mapLatest
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.produceIn
 import kotlinx.coroutines.launch
@@ -34,8 +34,10 @@ data class InternalStoreState<S, A>(
   val state: S,
   val action: A
 ) {
-  override fun toString() = "InternalStoreState(action=$action,state=$state)"
+  override fun toString() = "InternalStoreState(action=$action, state=$state)"
 }
+
+
 
 private class StoreImplementation<S, A>(
   val scope: CoroutineScope,
@@ -47,7 +49,7 @@ private class StoreImplementation<S, A>(
   private val channel = ConflatedBroadcastChannel<InternalStoreState<S, A>>()
   private val flow by lazy {
     channel.asFlow()
-      .log("Reducing").mapLatest { reducer(it.state, it.action) }
+      .log("Reducing").map { reducer(it.state, it.action) }
       .distinctUntilChanged()
       .log("New state").onEach { latest = it }
       .flowOn(IO)
@@ -59,7 +61,7 @@ private class StoreImplementation<S, A>(
       // and then back.
       //
       // TODO(https://github.com/Kotlin/kotlinx.coroutines/pull/1716): Use Flow#shareIn
-      .broadcastIn(scope).asFlow()
+      .broadcastIn(scope)
   }
 
   override fun dispatch(action: A) = scope.launch {
@@ -68,14 +70,14 @@ private class StoreImplementation<S, A>(
   }
 
   override fun onChange(callback: StoreChangeCallback<S>): () -> Unit {
-    val job = flow
+    val job = flow.asFlow()
       .log("Firing onChange callback for ${callback.hashCode()}").onEach { callback(it) }
       .flowOn(Main)
       .produceIn(scope)
     return { job.cancel() }
   }
 
-  override fun states() = flow
+  override fun states() = flow.asFlow()
 
   override val state: S get() = latest
 }

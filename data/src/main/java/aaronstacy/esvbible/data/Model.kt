@@ -72,7 +72,37 @@ enum class Book(val chapterCount: Int, private val _displayName: String? = null)
   val displayName: String get() = _displayName ?: name
 }
 
+private val booksArray by lazy { Book.values() }
+
 data class Reference(val book: Book, val chapter: Int, val verse: Int) {
+  fun isFirstChapter() = book === Book.Genesis && chapter == 1
+
+  fun isLastChapter() = book === Book.Revelation && chapter == Book.Revelation.chapterCount
+
+  fun nextChapter(): Reference {
+    return if (chapter == book.chapterCount) {
+      if (book.ordinal >= booksArray.size) {
+        throw RuntimeException("Requested next chapter of last chapter: $displayName")
+      } else {
+        Reference(booksArray[book.ordinal + 1], 1, 1)
+      }
+    } else {
+      Reference(book, chapter + 1, 1)
+    }
+  }
+
+  fun previousChapter(): Reference {
+    return if (chapter == 1) {
+      if (book.ordinal == 0) {
+        throw RuntimeException("Requested previous chapter of first: $displayName")
+      } else {
+        Reference(booksArray[book.ordinal - 1], 1, 1)
+      }
+    } else {
+      Reference(book, chapter - 1, 1)
+    }
+  }
+
   init {
     check(chapter > 0) { "Reference chapter must be > 0, got $book $chapter:$verse." }
     check(chapter <= book.chapterCount) {
@@ -81,7 +111,9 @@ data class Reference(val book: Book, val chapter: Int, val verse: Int) {
     check(verse > 0) { "Verse must be > 0, got $book $chapter:$verse." }
   }
 
-  val displayName get() = "${book.displayName} $chapter:$verse"
+  val chapterName get() = "${book.displayName} $chapter"
+
+  private val displayName get() = "$chapterName:$verse"
 }
 
 data class Chapter(val reference: Reference, val text: String)
